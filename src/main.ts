@@ -13,6 +13,7 @@ import { GeradorCongruencial } from "./implementacoes/gerador-congruencial";
 import { PilhaEmArray } from "./implementacoes/pilha-em-array";
 import { FormatadorCompacto } from "./implementacoes/formatador-compacto";
 import { OrdenacaoPorValor } from "./implementacoes/ordenacao-por-valor";
+import { FilaEmArray } from "./implementacoes/fila-em-array";
 
 // A semente da partida vem da página (?semente=123); o padrão é 42.
 // O verificador usa sempre a semente 42, pois conhece a sequência dela.
@@ -28,6 +29,8 @@ let geradorDeTeste: GeradorAleatorio = new GeradorCongruencial(SEMENTE_DE_TESTE)
 let compra: PilhaDeCartas = new PilhaEmArray();
 let descarte: PilhaDeCartas = new PilhaEmArray();
 let formatador: FormatadorDeCarta = new FormatadorCompacto();
+let ordemDaVez: FilaDeJogadores = new FilaEmArray();
+let ordenacao: EstrategiaDeOrdenacao = new OrdenacaoPorValor();
 // Etapa 1: confere se as suas implementações respeitam os contratos.
 // O resultado aparece no CONSOLE do navegador (F12).
 console.log("=== Verificação das implementações ===");
